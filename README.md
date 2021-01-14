@@ -13,7 +13,7 @@ Automatic test script on amazon
 	
 - Run by docker-compose
 ```sh
-	docker-compose up -d
+docker-compose up -d
 ```
 - Scale node
 ```sh
@@ -24,15 +24,15 @@ docker-compose scale firefox=3
 ## Usage
 
 1. Configure virtual environment
-	```
-		python3 -m venv sbase_env
-		source sbase_env/bin/activate
-	```
+```sh
+python3 -m venv sbase_env
+source sbase_env/bin/activate
+```
 
 2. 	Install required packages
-	```
-		pip install -r requirements.txt
-	```
+```sh
+pip install -r requirements.txt
+```
 
 3. Setup 
 	3.1 *Login account*
@@ -40,22 +40,22 @@ docker-compose scale firefox=3
 
 4. Run tests
 	4.1 *Run your tests:*
-	```
-		python3 -m pytest tests/test_login.py
-	```
+```sh
+python3 -m pytest tests/test_login.py
+```
 	4.2 *Run your tests with locales:*
-	``` 
-		python3 -m pytest tests/test_login.py --locale=[zh-tw|en-us]
-	```
+```sh 
+python3 -m pytest tests/test_login.py --locale=[zh-tw|en-us]
+```
 	4.3 *Run your tests on the Selenium Grid:*
-	``` 
-		python3 -m pytest tests/test_login.py --server=IP_ADDRESS --port=4444. 
-	```
+```sh
+python3 -m pytest tests/test_login.py --server=IP_ADDRESS --port=4444. 
+```
 
 
 ## troubleshooting
 1. Q : This version of ChromeDriver only supports Chrome version 77
-	```
-		# Install chromedriver latest
-		sbase install chromedriver latest 
-	```
+```sh
+# Install chromedriver latest
+sbase install chromedriver latest 
+```
