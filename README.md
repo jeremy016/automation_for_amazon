@@ -35,19 +35,19 @@ pip install -r requirements.txt
 ```
 
 3. Setup 
-	3.1 *Login account*
+	1. *Login account*
 		Insert valid account information in "users.py" (path: utils/users.py)
 
 4. Run tests
-	4.1 *Run your tests:*
+	1. *Run your tests:*
 ```sh
 python3 -m pytest tests/test_login.py
 ```
-	4.2 *Run your tests with locales:*
+	2. *Run your tests with locales:*
 ```sh 
 python3 -m pytest tests/test_login.py --locale=[zh-tw|en-us]
 ```
-	4.3 *Run your tests on the Selenium Grid:*
+	3. *Run your tests on the Selenium Grid:*
 ```sh
 python3 -m pytest tests/test_login.py --server=IP_ADDRESS --port=4444. 
 ```
