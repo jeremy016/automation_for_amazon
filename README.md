@@ -45,26 +45,24 @@ pip install -r requirements.txt
 ```sh
 # Install chromedriver latest
 sbase install chromedriver latest 
-	# chromedriver for Chrome, edgedriver for Edge, geckodriver for Firefox
+# chromedriver for Chrome, edgedriver for Edge, geckodriver for Firefox
 ```
 
 5. Run tests
-	1. *Run your tests:*
+	1. Run your tests:
 ```sh
 python3 -m pytest tests/test_login.py --html=report/report.html
 ```
-	2. *Run your tests with locales:*
+	2. Run your tests with locales:
 ```sh 
 python3 -m pytest tests/test_login.py --locale=[zh-tw|en-us]
 ```
-	3. *Run your tests by browser:*
+	3. Run your tests by browser:
 ```sh
 python3 -m pytest tests/test_login.py --browser=[chrome|firefox|safari]
-
 # Run safaridriver --enable once in a terminal to enable Safari's WebDriver. (If you’re upgrading from a previous macOS release, you may need to prefix the command with sudo.)
-
 ```
-	4. *Run your tests on the Selenium Grid:*
+	4. Run your tests on the Selenium Grid:
 ```sh
 python3 -m pytest tests/test_login.py --server=IP_ADDRESS --port=4444. 
 ```
