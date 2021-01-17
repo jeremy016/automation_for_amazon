@@ -36,9 +36,9 @@ pip install -r requirements.txt
 
 3. Setup 
 	1. Login account
-			Insert a valid account information (path: utils/users.py)
+		> Insert a valid account information (path: utils/users.py)
 	2. Login email
-			Insert a valid mailosaur email account (path: utils/users.py) (Note: I use *Mailosaur* as a test email. please create a account of mailosaur)
+		> Insert a valid mailosaur email account (path: utils/users.py) (Note: I use *Mailosaur* as a test email. please create a account of mailosaur)
 		
 4. Pre-action
 	1. Check if the driver is the latest version
