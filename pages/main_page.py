@@ -31,7 +31,7 @@ class MainPage(BasePage):
         self.assert_true(gotIt, msg="The verification of URL fail, Got:{}".format(get_url))
 
     def verify_valid_login_by_content(self):
-        
+        self.wait_for_element(*self.main_page_locator.SELECT_LANGUAGE)
         current_lang= self.get_text(*self.main_page_locator.SELECT_LANGUAGE)
 
         if '繁體中文' in current_lang:

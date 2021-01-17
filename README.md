@@ -40,8 +40,15 @@ pip install -r requirements.txt
 	2. *Login email*
 		Insert a valid mailosaur email account (path: utils/users.py) (Note: I use *Mailosaur* as a test email. please create a account of mailosaur)
 		
+4. Pre-action
+	1. Check if the driver is the latest version
+```sh
+# Install chromedriver latest
+sbase install chromedriver latest 
+	# chromedriver for Chrome, edgedriver for Edge, geckodriver for Firefox
+```
 
-4. Run tests
+5. Run tests
 	1. *Run your tests:*
 ```sh
 python3 -m pytest tests/test_login.py
@@ -50,14 +57,14 @@ python3 -m pytest tests/test_login.py
 ```sh 
 python3 -m pytest tests/test_login.py --locale=[zh-tw|en-us]
 ```
-	3. *Run your tests on the Selenium Grid:*
+	3. *Run your tests by browser:*
 ```sh
 python3 -m pytest tests/test_login.py --browser=[chrome|firefox|safari]
 
 # Run safaridriver --enable once in a terminal to enable Safari's WebDriver. (If you’re upgrading from a previous macOS release, you may need to prefix the command with sudo.)
 
 ```
-	3. *Run your tests on the Selenium Grid:*
+	4. *Run your tests on the Selenium Grid:*
 ```sh
 python3 -m pytest tests/test_login.py --server=IP_ADDRESS --port=4444. 
 ```
