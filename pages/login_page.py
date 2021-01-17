@@ -94,6 +94,10 @@ class LoginPage(BasePage):
         self.assert_text(LANG_OF_LOGIN.LOGIN[lang]['warning_of_no_password'] ,*self.login_page_locator.PASSWORD_CONTENT_ALERT)
 
     def verify_auth_error_mssage_when_submit_with(self, lang, situation=''):
+        # Temp condition
+        if self.is_element_visible(*self.login_page_locator.AUTH_CAPTCHA_IMAGE):
+            self.fail(msg="The graphic recognition module has not been developed yet.")
+
         self.wait_for_element_visible(*self.login_page_locator.AUTH_ERROR_MESSAGE_BOX)
         # Elements on account page
         self.assert_element_present(*self.login_page_locator.AUTH_ERROR_MESSAGE_ICON)
@@ -200,7 +204,9 @@ class LoginPage(BasePage):
     def forgot_password(self, user):
         self.click_forgot_password_button()
         self.insert_account_if_no_value(user)
-        time.sleep(15)
+        # Temp condition
+        if self.is_element_visible(*self.login_page_locator.CVF_CAPTCHA_IMG):
+            self.fail(msg="The graphic recognition module has not been developed yet.")
         self.insert_otp()
         self.insert_two_password_check(user)
     

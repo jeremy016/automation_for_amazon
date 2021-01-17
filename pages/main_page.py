@@ -13,6 +13,7 @@ class MainPage(BasePage):
 
     def setUp(self):
         self.main_page_locator = MainPageLocators
+        self.login_page_locator = LoginPageLocators
 
         super().setUp()
 
@@ -53,6 +54,11 @@ class MainPage(BasePage):
         self.assert_true(LANG_OF_MAIN.MAIN[lang]['shortened_name'].format(user['display_name'])==get_text_on_nav_youre_amazon, "Text wrong;  Got:{};Not:{}".format(get_text_on_nav_youre_amazon,LANG_OF_MAIN.MAIN[lang]['shortened_name'].format(user['display_name'])))
 
     def verify_valid_login(self):
+        
+        # Temp condition
+        if self.is_element_visible(*self.login_page_locator.AUTH_CAPTCHA_IMAGE):
+            self.fail(msg="The graphic recognition module has not been developed yet.")
+
         self.verify_valid_login_by_url()
         self.verify_valid_login_by_content()
         

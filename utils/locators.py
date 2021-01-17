@@ -13,7 +13,6 @@ class MainPageLocators(object):
     TEXT_NAV_YOURE_AMAZON = ( 'nav-your-amazon-text',By.ID)
     TEXT_NAV_ACCOUNT = ( 'nav-link-accountList-nav-line-1',By.ID)
     SELECT_LANGUAGE = ( '#icp-touch-link-language > span.icp-color-base',By.CSS_SELECTOR)
-    
 
 class LoginPageLocators(object):
     # locators of email page
@@ -42,9 +41,9 @@ class LoginPageLocators(object):
     KEEP_SIGNED_IN_CHECKBOX = ( 'input[name=rememberMe]',By.CSS_SELECTOR)
     KEEP_SIGNED_IN_LABEL = ( 'span.a-label.a-checkbox-label',By.CSS_SELECTOR)
     KEEP_SIGNED_IN_DETAIL= ( 'remember_me_learn_more_link', By.ID)
-    # password assistance
-
     # authentication required
+    AUTH_CAPTCHA_IMAGE = ( 'auth-captcha-image-container',By.ID)
+    CVF_CAPTCHA_IMG = ( '.a-section.a-text-center.cvf-captcha-img',By.CSS_SELECTOR)
     EMAIL_CVF = ( '#cvf-page-content > div > div > div:nth-child(1) > form > div:nth-child(2) > input', By.CSS_SELECTOR)
     CONTINUE_AUTHENTICATION_REQUIRED = ( '#a-autoid-0 > span > input', By.CSS_SELECTOR)
     # locators of alert
@@ -54,9 +53,6 @@ class LoginPageLocators(object):
     AUTH_ERROR_MESSAGE_ICON = ( '#auth-error-message-box > .a-box-inner.a-alert-container > i.a-icon.a-icon-alert', By.CSS_SELECTOR)
     AUTH_ERROR_MESSAGE_HEADER = ( '#auth-error-message-box > .a-box-inner.a-alert-container > h4.a-alert-heading', By.CSS_SELECTOR)
     AUTH_ERROR_MESSAGE_CONTENT = ( '#auth-error-message-box > div > div > ul > li > span.a-list-item', By.CSS_SELECTOR)
-    
-    
-
     # ap_fpp_password
     AP_FPP_PASSWORD = ( 'ap_fpp_password', By.ID)
     AP_FPP_PASSWORD_CHECK = ( 'ap_fpp_password_check', By.ID)
