@@ -51,7 +51,7 @@ sbase install chromedriver latest
 5. Run tests
 	1. *Run your tests:*
 ```sh
-python3 -m pytest tests/test_login.py
+python3 -m pytest tests/test_login.py --html=report/report.html
 ```
 	2. *Run your tests with locales:*
 ```sh 
