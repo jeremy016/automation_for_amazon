@@ -36,7 +36,10 @@ pip install -r requirements.txt
 
 3. Setup 
 	1. *Login account*
-		Insert valid account information in "users.py" (path: utils/users.py)
+		Insert a valid account information (path: utils/users.py)
+	2. *Login email*
+		Insert a valid mailosaur email account (path: utils/users.py) (Note: I use *Mailosaur* as a test email. please create a account of mailosaur)
+		
 
 4. Run tests
 	1. *Run your tests:*
@@ -46,6 +49,13 @@ python3 -m pytest tests/test_login.py
 	2. *Run your tests with locales:*
 ```sh 
 python3 -m pytest tests/test_login.py --locale=[zh-tw|en-us]
+```
+	3. *Run your tests on the Selenium Grid:*
+```sh
+python3 -m pytest tests/test_login.py --browser=[chrome|firefox|safari]
+
+# Run safaridriver --enable once in a terminal to enable Safari's WebDriver. (If you’re upgrading from a previous macOS release, you may need to prefix the command with sudo.)
+
 ```
 	3. *Run your tests on the Selenium Grid:*
 ```sh
